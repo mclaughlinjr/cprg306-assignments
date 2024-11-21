@@ -1,5 +1,9 @@
+"use client";
+
 import ItemList from "./item-list";
-import NewItem from "./new-item";
+import NewItem from "./new-item.js";
+import itemsData from "./items.json";
+import { useState } from "react";
 
 
 
@@ -8,13 +12,18 @@ import NewItem from "./new-item";
 
 export default function Page() {
 
-
+const [items, setItems] = useState(itemsData);
+const handleAddItem = (newItem) => {
+    setItems([...items, item]);
+};
 
 
 return (
-<ItemList />
-/*
-*/
+    <div>
+<ItemList items={itemsData} />
+<NewItem onAddItem={handleAddItem} />
+
+</div>
 );
 }
   

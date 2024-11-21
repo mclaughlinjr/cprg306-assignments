@@ -29,8 +29,8 @@ return (
   <main className="p-2">
     <h1 className="text-2xl font-semibold">Week 6</h1>
     <p>Currently sorting by: {sortBy}</p>
-    <button onClick={() => handleClick("name")}className="btn btn-primary">Sort by Name</button>
-    <button onClick={() => handleClick("category")}className="btn btn-accent">Sort by Category</button>
+    <button onClick={() => handleClick("name")}className="mt-4 bg-green-600 text-white rounded">Sort by Name</button>
+    <button onClick={() => handleClick("category")}className="mt-4 bg-green-600 text-white rounded">Sort by Category</button>
     <ul>
       {items.map((item) => (
         <li
